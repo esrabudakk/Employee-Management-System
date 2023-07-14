@@ -1,0 +1,2944 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "employee-management-system",
+    "version": "0.0.1",
+    "description": "Employee Management System",
+    "contact": {}
+  },
+  "paths": {
+    "/departments/{id}": {
+      "put": {
+        "x-controller-name": "DepartmentsController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "DepartmentsController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Departments PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Departments"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "DepartmentsController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "DepartmentsController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "DepartmentsController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Departments PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DepartmentsPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "DepartmentsController.updateById"
+      },
+      "delete": {
+        "x-controller-name": "DepartmentsController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "DepartmentsController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Departments DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "DepartmentsController.deleteById"
+      }
+    },
+    "/departments": {
+      "post": {
+        "x-controller-name": "DepartmentsController",
+        "x-operation-name": "create",
+        "tags": [
+          "DepartmentsController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Departments model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Departments"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewDepartments"
+              }
+            }
+          }
+        },
+        "operationId": "DepartmentsController.create"
+      },
+      "get": {
+        "x-controller-name": "DepartmentsController",
+        "x-operation-name": "find",
+        "tags": [
+          "DepartmentsController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Departments model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DepartmentsWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Departments.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "DepartmentsController.find"
+      }
+    },
+    "/employees/{id}": {
+      "put": {
+        "x-controller-name": "EmployeesController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "EmployeesController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Employees PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Employees"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "EmployeesController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "EmployeesController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "EmployeesController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Employees PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmployeesPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "EmployeesController.updateById"
+      },
+      "get": {
+        "x-controller-name": "EmployeesController",
+        "x-operation-name": "findById",
+        "tags": [
+          "EmployeesController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Employees model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeesWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Employees.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "EmployeesController.findById"
+      },
+      "delete": {
+        "x-controller-name": "EmployeesController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "EmployeesController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Employees DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "EmployeesController.deleteById"
+      }
+    },
+    "/employees": {
+      "post": {
+        "x-controller-name": "EmployeesController",
+        "x-operation-name": "create",
+        "tags": [
+          "EmployeesController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Employees model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Employees"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewEmployees"
+              }
+            }
+          }
+        },
+        "operationId": "EmployeesController.create"
+      },
+      "get": {
+        "x-controller-name": "EmployeesController",
+        "x-operation-name": "find",
+        "tags": [
+          "EmployeesController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Employees model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EmployeesWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Employees.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "EmployeesController.find"
+      }
+    },
+    "/list-of-employee/{id}": {
+      "get": {
+        "x-controller-name": "ListofEmployee",
+        "x-operation-name": "find",
+        "tags": [
+          "ListofEmployee"
+        ],
+        "responses": {
+          "200": {
+            "description": "List of manager's employee",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeesWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Employees.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "ListofEmployee.find"
+      }
+    },
+    "/locations/{id}": {
+      "put": {
+        "x-controller-name": "LocationsController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "LocationsController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Locations PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Locations"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "LocationsController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "LocationsController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "LocationsController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Locations PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LocationsPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "LocationsController.updateById"
+      },
+      "delete": {
+        "x-controller-name": "LocationsController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "LocationsController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Locations DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "LocationsController.deleteById"
+      }
+    },
+    "/locations": {
+      "post": {
+        "x-controller-name": "LocationsController",
+        "x-operation-name": "create",
+        "tags": [
+          "LocationsController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Locations model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Locations"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewLocations"
+              }
+            }
+          }
+        },
+        "operationId": "LocationsController.create"
+      },
+      "get": {
+        "x-controller-name": "LocationsController",
+        "x-operation-name": "find",
+        "tags": [
+          "LocationsController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Locations model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LocationsWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Locations.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "LocationsController.find"
+      }
+    },
+    "/ping": {
+      "get": {
+        "x-controller-name": "PingController",
+        "x-operation-name": "ping",
+        "tags": [
+          "PingController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ping Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PingResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PingController.ping"
+      }
+    },
+    "/salary-of-departments/{id}": {
+      "get": {
+        "x-controller-name": "SalaryController",
+        "x-operation-name": "findById",
+        "tags": [
+          "SalaryController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Departments model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DepartmentsWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Departments.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "SalaryController.findById"
+      }
+    },
+    "/title-histories/{id}": {
+      "put": {
+        "x-controller-name": "TitleHistoriesController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "TitleHistoriesController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "TitleHistories PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TitleHistories"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "TitleHistoriesController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "TitleHistoriesController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "TitleHistoriesController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "TitleHistories PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TitleHistoriesPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "TitleHistoriesController.updateById"
+      },
+      "get": {
+        "x-controller-name": "TitleHistoriesController",
+        "x-operation-name": "findById",
+        "tags": [
+          "TitleHistoriesController"
+        ],
+        "responses": {
+          "200": {
+            "description": "TitleHistories model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TitleHistoriesWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TitleHistories.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "TitleHistoriesController.findById"
+      },
+      "delete": {
+        "x-controller-name": "TitleHistoriesController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "TitleHistoriesController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "TitleHistories DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "TitleHistoriesController.deleteById"
+      }
+    },
+    "/title-histories": {
+      "post": {
+        "x-controller-name": "TitleHistoriesController",
+        "x-operation-name": "create",
+        "tags": [
+          "TitleHistoriesController"
+        ],
+        "responses": {
+          "200": {
+            "description": "TitleHistories model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TitleHistories"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewTitleHistories"
+              }
+            }
+          }
+        },
+        "operationId": "TitleHistoriesController.create"
+      },
+      "patch": {
+        "x-controller-name": "TitleHistoriesController",
+        "x-operation-name": "updateAll",
+        "tags": [
+          "TitleHistoriesController"
+        ],
+        "responses": {
+          "200": {
+            "description": "TitleHistories PATCH success count",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/loopback.Count"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "where",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "TitleHistories.WhereFilter",
+                  "additionalProperties": true,
+                  "x-typescript-type": "@loopback/repository#Where<TitleHistories>"
+                }
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TitleHistoriesPartial"
+              }
+            }
+          }
+        },
+        "operationId": "TitleHistoriesController.updateAll"
+      },
+      "get": {
+        "x-controller-name": "TitleHistoriesController",
+        "x-operation-name": "find",
+        "tags": [
+          "TitleHistoriesController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of TitleHistories model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TitleHistoriesWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TitleHistories.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "TitleHistoriesController.find"
+      }
+    },
+    "/title-histories-of-employee/{id}": {
+      "get": {
+        "x-controller-name": "TitleHistoriesWEmployee",
+        "x-operation-name": "findById",
+        "tags": [
+          "TitleHistoriesWEmployee"
+        ],
+        "responses": {
+          "200": {
+            "description": "Titles Histories of Employee",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmployeesWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Employees.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "TitleHistoriesWEmployee.findById"
+      }
+    },
+    "/titles/{id}": {
+      "put": {
+        "x-controller-name": "TitlesController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "TitlesController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Titles PUT success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Titles"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "TitlesController.replaceById"
+      },
+      "patch": {
+        "x-controller-name": "TitlesController",
+        "x-operation-name": "updateById",
+        "tags": [
+          "TitlesController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Titles PATCH success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TitlesPartial"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "TitlesController.updateById"
+      },
+      "get": {
+        "x-controller-name": "TitlesController",
+        "x-operation-name": "findById",
+        "tags": [
+          "TitlesController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Titles model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TitlesWithRelations"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Titles.Filter"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "TitlesController.findById"
+      },
+      "delete": {
+        "x-controller-name": "TitlesController",
+        "x-operation-name": "deleteById",
+        "tags": [
+          "TitlesController"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Titles DELETE success"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "operationId": "TitlesController.deleteById"
+      }
+    },
+    "/titles": {
+      "post": {
+        "x-controller-name": "TitlesController",
+        "x-operation-name": "create",
+        "tags": [
+          "TitlesController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Titles model instance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Titles"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewTitles"
+              }
+            }
+          }
+        },
+        "operationId": "TitlesController.create"
+      },
+      "get": {
+        "x-controller-name": "TitlesController",
+        "x-operation-name": "find",
+        "tags": [
+          "TitlesController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Titles model instances",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TitlesWithRelations"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Titles.Filter1"
+                }
+              }
+            }
+          }
+        ],
+        "operationId": "TitlesController.find"
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "http://[::1]:3000"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "Titles": {
+        "title": "Titles",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "titleName": {
+            "type": "string"
+          },
+          "salary": {
+            "type": "number"
+          },
+          "responsibilities": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "titleName",
+          "salary",
+          "responsibilities"
+        ],
+        "additionalProperties": false
+      },
+      "NewTitles": {
+        "title": "NewTitles",
+        "type": "object",
+        "description": "(tsType: Titles, schemaOptions: { title: 'NewTitles' })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "titleName": {
+            "type": "string"
+          },
+          "salary": {
+            "type": "number"
+          },
+          "responsibilities": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "titleName",
+          "salary",
+          "responsibilities"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "Titles"
+      },
+      "TitlesWithRelations": {
+        "title": "TitlesWithRelations",
+        "type": "object",
+        "description": "(tsType: TitlesWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "titleName": {
+            "type": "string"
+          },
+          "salary": {
+            "type": "number"
+          },
+          "responsibilities": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "titleName",
+          "salary",
+          "responsibilities"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "TitlesWithRelations"
+      },
+      "TitlesPartial": {
+        "title": "TitlesPartial",
+        "type": "object",
+        "description": "(tsType: Partial<Titles>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "titleName": {
+            "type": "string"
+          },
+          "salary": {
+            "type": "number"
+          },
+          "responsibilities": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<Titles>"
+      },
+      "EmployeesWithRelations": {
+        "title": "EmployeesWithRelations",
+        "type": "object",
+        "description": "(tsType: EmployeesWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "hireDate": {
+            "type": "string"
+          },
+          "departmentId": {
+            "type": "number"
+          },
+          "titleId": {
+            "type": "number"
+          },
+          "managerId": {
+            "type": "number"
+          },
+          "department": {
+            "$ref": "#/components/schemas/DepartmentsWithRelations"
+          },
+          "title": {
+            "$ref": "#/components/schemas/TitlesWithRelations"
+          },
+          "manager": {
+            "$ref": "#/components/schemas/EmployeesWithRelations"
+          }
+        },
+        "required": [
+          "firstName",
+          "lastName",
+          "email",
+          "phone",
+          "hireDate"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "EmployeesWithRelations"
+      },
+      "TitleHistories": {
+        "title": "TitleHistories",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "departmentId": {
+            "type": "number"
+          },
+          "titleId": {
+            "type": "number"
+          },
+          "employeeId": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "startDate"
+        ],
+        "additionalProperties": false
+      },
+      "NewTitleHistories": {
+        "title": "NewTitleHistories",
+        "type": "object",
+        "description": "(tsType: TitleHistories, schemaOptions: { title: 'NewTitleHistories' })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "departmentId": {
+            "type": "number"
+          },
+          "titleId": {
+            "type": "number"
+          },
+          "employeeId": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "startDate"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "TitleHistories"
+      },
+      "DepartmentsWithRelations": {
+        "title": "DepartmentsWithRelations",
+        "type": "object",
+        "description": "(tsType: DepartmentsWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "departmentName": {
+            "type": "string"
+          },
+          "locationId": {
+            "type": "number"
+          },
+          "managerId": {
+            "type": "number"
+          },
+          "location": {
+            "$ref": "#/components/schemas/LocationsWithRelations"
+          },
+          "manager": {
+            "$ref": "#/components/schemas/EmployeesWithRelations"
+          }
+        },
+        "required": [
+          "departmentName"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "DepartmentsWithRelations"
+      },
+      "TitleHistoriesWithRelations": {
+        "title": "TitleHistoriesWithRelations",
+        "type": "object",
+        "description": "(tsType: TitleHistoriesWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "departmentId": {
+            "type": "number"
+          },
+          "titleId": {
+            "type": "number"
+          },
+          "employeeId": {
+            "type": "number"
+          },
+          "department": {
+            "$ref": "#/components/schemas/DepartmentsWithRelations"
+          },
+          "title": {
+            "$ref": "#/components/schemas/TitlesWithRelations"
+          },
+          "employee": {
+            "$ref": "#/components/schemas/EmployeesWithRelations"
+          }
+        },
+        "required": [
+          "startDate"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "TitleHistoriesWithRelations"
+      },
+      "TitleHistoriesPartial": {
+        "title": "TitleHistoriesPartial",
+        "type": "object",
+        "description": "(tsType: Partial<TitleHistories>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "departmentId": {
+            "type": "number"
+          },
+          "titleId": {
+            "type": "number"
+          },
+          "employeeId": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<TitleHistories>"
+      },
+      "Locations": {
+        "title": "Locations",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "locationName": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "zipCode": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "locationName",
+          "address",
+          "zipCode",
+          "city",
+          "country"
+        ],
+        "additionalProperties": false
+      },
+      "NewLocations": {
+        "title": "NewLocations",
+        "type": "object",
+        "description": "(tsType: Locations, schemaOptions: { title: 'NewLocations' })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "locationName": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "zipCode": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "locationName",
+          "address",
+          "zipCode",
+          "city",
+          "country"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "Locations"
+      },
+      "LocationsWithRelations": {
+        "title": "LocationsWithRelations",
+        "type": "object",
+        "description": "(tsType: LocationsWithRelations, schemaOptions: { includeRelations: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "locationName": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "zipCode": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "locationName",
+          "address",
+          "zipCode",
+          "city",
+          "country"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "LocationsWithRelations"
+      },
+      "LocationsPartial": {
+        "title": "LocationsPartial",
+        "type": "object",
+        "description": "(tsType: Partial<Locations>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "locationName": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "zipCode": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<Locations>"
+      },
+      "Employees": {
+        "title": "Employees",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "hireDate": {
+            "type": "string"
+          },
+          "departmentId": {
+            "type": "number"
+          },
+          "titleId": {
+            "type": "number"
+          },
+          "managerId": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "firstName",
+          "lastName",
+          "email",
+          "phone",
+          "hireDate"
+        ],
+        "additionalProperties": false
+      },
+      "NewEmployees": {
+        "title": "NewEmployees",
+        "type": "object",
+        "description": "(tsType: Employees, schemaOptions: { title: 'NewEmployees' })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "hireDate": {
+            "type": "string"
+          },
+          "departmentId": {
+            "type": "number"
+          },
+          "titleId": {
+            "type": "number"
+          },
+          "managerId": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "firstName",
+          "lastName",
+          "email",
+          "phone",
+          "hireDate"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "Employees"
+      },
+      "EmployeesPartial": {
+        "title": "EmployeesPartial",
+        "type": "object",
+        "description": "(tsType: Partial<Employees>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "hireDate": {
+            "type": "string"
+          },
+          "departmentId": {
+            "type": "number"
+          },
+          "titleId": {
+            "type": "number"
+          },
+          "managerId": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<Employees>"
+      },
+      "Departments": {
+        "title": "Departments",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "departmentName": {
+            "type": "string"
+          },
+          "locationId": {
+            "type": "number"
+          },
+          "managerId": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "departmentName"
+        ],
+        "additionalProperties": false
+      },
+      "NewDepartments": {
+        "title": "NewDepartments",
+        "type": "object",
+        "description": "(tsType: Departments, schemaOptions: { title: 'NewDepartments' })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "departmentName": {
+            "type": "string"
+          },
+          "locationId": {
+            "type": "number"
+          },
+          "managerId": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "departmentName"
+        ],
+        "additionalProperties": false,
+        "x-typescript-type": "Departments"
+      },
+      "DepartmentsPartial": {
+        "title": "DepartmentsPartial",
+        "type": "object",
+        "description": "(tsType: Partial<Departments>, schemaOptions: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "departmentName": {
+            "type": "string"
+          },
+          "locationId": {
+            "type": "number"
+          },
+          "managerId": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "Partial<Departments>"
+      },
+      "Departments.ScopeFilter": {
+        "type": "object",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": true
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            ]
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": false,
+        "title": "Departments.ScopeFilter"
+      },
+      "Departments.IncludeFilter.Items": {
+        "title": "Departments.IncludeFilter.Items",
+        "type": "object",
+        "properties": {
+          "relation": {
+            "type": "string",
+            "enum": [
+              "location",
+              "manager"
+            ]
+          },
+          "scope": {
+            "$ref": "#/components/schemas/Departments.ScopeFilter"
+          }
+        }
+      },
+      "Departments.Filter": {
+        "type": "object",
+        "title": "Departments.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "Departments.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "departmentName": {
+                    "type": "boolean"
+                  },
+                  "locationId": {
+                    "type": "boolean"
+                  },
+                  "managerId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "departmentName",
+                    "locationId",
+                    "managerId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Departments.Fields"
+          },
+          "include": {
+            "title": "Departments.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Departments.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Departments>"
+      },
+      "Employees.ScopeFilter": {
+        "type": "object",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": true
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            ]
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": false,
+        "title": "Employees.ScopeFilter"
+      },
+      "Employees.IncludeFilter.Items": {
+        "title": "Employees.IncludeFilter.Items",
+        "type": "object",
+        "properties": {
+          "relation": {
+            "type": "string",
+            "enum": [
+              "department",
+              "title",
+              "manager"
+            ]
+          },
+          "scope": {
+            "$ref": "#/components/schemas/Employees.ScopeFilter"
+          }
+        }
+      },
+      "Employees.Filter": {
+        "type": "object",
+        "title": "Employees.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "firstName": {
+                    "type": "boolean"
+                  },
+                  "lastName": {
+                    "type": "boolean"
+                  },
+                  "email": {
+                    "type": "boolean"
+                  },
+                  "phone": {
+                    "type": "boolean"
+                  },
+                  "hireDate": {
+                    "type": "boolean"
+                  },
+                  "departmentId": {
+                    "type": "boolean"
+                  },
+                  "titleId": {
+                    "type": "boolean"
+                  },
+                  "managerId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "firstName",
+                    "lastName",
+                    "email",
+                    "phone",
+                    "hireDate",
+                    "departmentId",
+                    "titleId",
+                    "managerId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Employees.Fields"
+          },
+          "include": {
+            "title": "Employees.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Employees.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Employees>"
+      },
+      "Employees.Filter1": {
+        "type": "object",
+        "title": "Employees.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "Employees.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "firstName": {
+                    "type": "boolean"
+                  },
+                  "lastName": {
+                    "type": "boolean"
+                  },
+                  "email": {
+                    "type": "boolean"
+                  },
+                  "phone": {
+                    "type": "boolean"
+                  },
+                  "hireDate": {
+                    "type": "boolean"
+                  },
+                  "departmentId": {
+                    "type": "boolean"
+                  },
+                  "titleId": {
+                    "type": "boolean"
+                  },
+                  "managerId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "firstName",
+                    "lastName",
+                    "email",
+                    "phone",
+                    "hireDate",
+                    "departmentId",
+                    "titleId",
+                    "managerId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Employees.Fields"
+          },
+          "include": {
+            "title": "Employees.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Employees.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Employees>"
+      },
+      "Locations.Filter": {
+        "type": "object",
+        "title": "Locations.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "Locations.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "locationName": {
+                    "type": "boolean"
+                  },
+                  "address": {
+                    "type": "boolean"
+                  },
+                  "zipCode": {
+                    "type": "boolean"
+                  },
+                  "city": {
+                    "type": "boolean"
+                  },
+                  "country": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "locationName",
+                    "address",
+                    "zipCode",
+                    "city",
+                    "country"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Locations.Fields"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Locations>"
+      },
+      "PingResponse": {
+        "type": "object",
+        "title": "PingResponse",
+        "properties": {
+          "greeting": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "headers": {
+            "type": "object",
+            "properties": {
+              "Content-Type": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "Departments.Filter1": {
+        "type": "object",
+        "title": "Departments.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "departmentName": {
+                    "type": "boolean"
+                  },
+                  "locationId": {
+                    "type": "boolean"
+                  },
+                  "managerId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "departmentName",
+                    "locationId",
+                    "managerId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Departments.Fields"
+          },
+          "include": {
+            "title": "Departments.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Departments.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Departments>"
+      },
+      "TitleHistories.ScopeFilter": {
+        "type": "object",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": true
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              }
+            ]
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {},
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": false,
+        "title": "TitleHistories.ScopeFilter"
+      },
+      "TitleHistories.IncludeFilter.Items": {
+        "title": "TitleHistories.IncludeFilter.Items",
+        "type": "object",
+        "properties": {
+          "relation": {
+            "type": "string",
+            "enum": [
+              "department",
+              "title",
+              "employee"
+            ]
+          },
+          "scope": {
+            "$ref": "#/components/schemas/TitleHistories.ScopeFilter"
+          }
+        }
+      },
+      "TitleHistories.Filter": {
+        "type": "object",
+        "title": "TitleHistories.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "startDate": {
+                    "type": "boolean"
+                  },
+                  "endDate": {
+                    "type": "boolean"
+                  },
+                  "departmentId": {
+                    "type": "boolean"
+                  },
+                  "titleId": {
+                    "type": "boolean"
+                  },
+                  "employeeId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "startDate",
+                    "endDate",
+                    "departmentId",
+                    "titleId",
+                    "employeeId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "TitleHistories.Fields"
+          },
+          "include": {
+            "title": "TitleHistories.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/TitleHistories.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<TitleHistories>"
+      },
+      "loopback.Count": {
+        "type": "object",
+        "title": "loopback.Count",
+        "x-typescript-type": "@loopback/repository#Count",
+        "properties": {
+          "count": {
+            "type": "number"
+          }
+        }
+      },
+      "TitleHistories.Filter1": {
+        "type": "object",
+        "title": "TitleHistories.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "TitleHistories.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "startDate": {
+                    "type": "boolean"
+                  },
+                  "endDate": {
+                    "type": "boolean"
+                  },
+                  "departmentId": {
+                    "type": "boolean"
+                  },
+                  "titleId": {
+                    "type": "boolean"
+                  },
+                  "employeeId": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "startDate",
+                    "endDate",
+                    "departmentId",
+                    "titleId",
+                    "employeeId"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "TitleHistories.Fields"
+          },
+          "include": {
+            "title": "TitleHistories.IncludeFilter",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/TitleHistories.IncludeFilter.Items"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<TitleHistories>"
+      },
+      "Titles.Filter": {
+        "type": "object",
+        "title": "Titles.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "titleName": {
+                    "type": "boolean"
+                  },
+                  "salary": {
+                    "type": "boolean"
+                  },
+                  "responsibilities": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "titleName",
+                    "salary",
+                    "responsibilities"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Titles.Fields"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Titles>"
+      },
+      "Titles.Filter1": {
+        "type": "object",
+        "title": "Titles.Filter",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "example": 100
+          },
+          "skip": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "order": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "where": {
+            "title": "Titles.WhereFilter",
+            "type": "object",
+            "additionalProperties": true
+          },
+          "fields": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "boolean"
+                  },
+                  "titleName": {
+                    "type": "boolean"
+                  },
+                  "salary": {
+                    "type": "boolean"
+                  },
+                  "responsibilities": {
+                    "type": "boolean"
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "titleName",
+                    "salary",
+                    "responsibilities"
+                  ],
+                  "example": "id"
+                },
+                "uniqueItems": true
+              }
+            ],
+            "title": "Titles.Fields"
+          }
+        },
+        "additionalProperties": false,
+        "x-typescript-type": "@loopback/repository#Filter<Titles>"
+      }
+    }
+  }
+}

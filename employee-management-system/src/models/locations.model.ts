@@ -1,0 +1,73 @@
+import {Entity, model, property} from '@loopback/repository';
+
+@model({settings: {strict: true}})
+export class Locations extends Entity {
+  @property({
+    type: 'number',
+    id: true,
+    generated: true,
+    required: true,
+  })
+  id: number;
+
+  @property({
+    type: 'string',
+    required: true,
+    postgresql: {
+      columnName:'location_name',
+    }
+  })
+  locationName: string;
+
+  @property({
+    type: 'string',
+    required: true,
+    postgresql: {
+      columnName:'address',
+    }
+  })
+  address: string;
+
+  @property({
+    type: 'string',
+    required: true,
+    postgresql: {
+      columnName:'zip_code',
+    }
+  })
+  zipCode: string;
+
+  @property({
+    type: 'string',
+    required: true,
+    postgresql: {
+      columnName:'city',
+    }
+  })
+  city: string;
+
+  @property({
+    type: 'string',
+    required: true,
+    postgresql: {
+      columnName:'country',
+    }
+  })
+  country: string;
+
+  // Define well-known properties here
+
+  // Indexer property to allow additional data
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [prop: string]: any;
+
+  constructor(data?: Partial<Locations>) {
+    super(data);
+  }
+}
+
+export interface LocationsRelations {
+  // describe navigational properties here
+}
+
+export type LocationsWithRelations = Locations & LocationsRelations;
