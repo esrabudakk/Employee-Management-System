@@ -18,4 +18,4 @@ The project includes the following features:
 
 ### <u>Relational Database of the Project - PostgreSql</u>
 
-![![Database](/home/ebudak/Desktop/EmployeeManagementSystem/Database.png)]()
+![![Database](/home/ebudak/Desktop/Employee-Management-System/employee-management-system/database.png)]()
